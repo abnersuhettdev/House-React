@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+
+.container-c {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  font-family: "Roboto", sans-serif;
+  margin-top: 2%;
+  background-color: white;
+  border-radius: 5px;
+  border: 2px solid #acbae1;
+  width: 500px;
+  max-width: 100%;
+}
+.header {
+  padding: 30px 40px;
+}
+
+.header h2 {
+  font-weight: 600;
+  color: #1c5b9e;
+  font-size: 30px;
+}
+
+.form {
+  padding: 0 40px 30px;
+}
+
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+  border: none;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+  color: #1c5b9e;
+}
+
+.form-control input {
+  border: 2px solid #3e445b;
+  border-radius: 5px;
+  outline: 0;
+
+  display: block;
+
+  font-size: 14px;
+
+  width: 100%;
+  padding: 15px;
+}
+
+.form-control.success input {
+  border: 3px solid #4eca64;
+}
+
+.form-control.error input {
+  border: 3px solid #db5a5a;
+}
+
+.form-control.error i .img-error {
+  visibility: visible;
+}
+
+.form-control.success i .img-success {
+  visibility: visible;
+}
+
+.form-control.error small {
+  color: #db5a5a;
+  visibility: visible;
+}
+
+.form-control i {
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  visibility: hidden;
+}
+
+.form-control small {
+  visibility: hidden;
+  position: absolute;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.form button {
+  background-color: #203163;
+  border-radius: 5px;
+  color: #fff;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 600;
+  width: 100%;
+
+  margin-top: 5px;
+
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #1c5b9e;
+  transition: 0.3s;
+}

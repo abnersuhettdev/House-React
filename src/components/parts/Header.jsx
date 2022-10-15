@@ -15,7 +15,7 @@ export default function Header() {
             alt="The House"
             width="40"
             height="40"
-            class="mx-4 d-inline-block"
+            className="mx-4 d-inline-block"
           />
           THE HOUSE
         </a>
