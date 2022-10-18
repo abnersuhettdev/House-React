@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Header from "../parts/Header";
+
 
 import Footer from "../parts/Footer";
 import imageHouse from "../../images/house.jpg";
@@ -12,29 +13,23 @@ export default function Home() {
     return {};
   }, []);
 
-  React.useEffect(() => {
-    fetch("http://localhost:8080/api/all",)
-      .then((response) => response.json())
-      .then((data) => {
-        setUsers(data);
-      });
-  }, []);
-
-  React.useEffect(() => {
-    fetch("http://localhost:8080/api/login", {
-      method: "POST",
-      body: JSON.stringify(userForm),
-      headers: { "Content-Type": "application/json" },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setUsers(data);
-      });
-  }, []);
+  // React.useEffect(() => {
+  //  fetch("http://localhost:8080/api/login", {
+  //     method: "POST",
+  //     body: JSON.stringify(userForm),
+  //     headers: { "Content-Type": "application/json" },
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       console.log(data)
+  //       setUsers(data);
+  //     }).catch((error)=>{})
+  // }, []);
+  const navigate = useNavigate()
 
   const login =() => {
 
-    fetch("http://localhost:8080/api/login", {
+   fetch("http://localhost:8080/api/login", {
       method: "POST",
       body: JSON.stringify(userForm),
       headers: { "Content-Type": "application/json" },
@@ -42,8 +37,13 @@ export default function Home() {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-      });
+        if(data.token){
+          navigate(`/user/${data.id}/painel`)
+        }
+      }).catch((error)=>{})
   };
+
+  
 
   return (
     <div className="wrapper">

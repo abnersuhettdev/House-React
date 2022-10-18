@@ -82,7 +82,7 @@ export default function NewUser() {
       <Header />
       <div id="form">
         <div className="container-c">
-          <div className="header">
+          <div className="title">
             <h2>Criar Conta</h2>
           </div>
           <form onSubmit={handleSubmit} className="form" id="form">

@@ -12,11 +12,11 @@
   width: 500px;
   max-width: 100%;
 }
-.header {
+.title {
   padding: 30px 40px;
 }
 
-.header h2 {
+.title h2 {
   font-weight: 600;
   color: #1c5b9e;
   font-size: 30px;
